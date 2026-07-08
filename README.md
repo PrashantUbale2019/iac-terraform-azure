@@ -1,9 +1,8 @@
-#iac-terraform-project
+# iac-terraform-project
 ### Store remote state - HCP - Terraform cloud
-### main.ts
-,,,
-
-# Configure the Azure provider
+--# main.ts
+```
+--# Configure the Azure provider
 terraform {
   required_providers {
     azurerm = {
@@ -36,12 +35,33 @@ resource "azurerm_resource_group" "iac-terraform-rg" {
   }
 }
 
-# Create a virtual network
+--# Create a virtual network
 resource "azurerm_virtual_network" "iac-terraform-vnet" {
   name                = "${local.prefix}-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = "westus2"
   resource_group_name = azurerm_resource_group.iac-terraform-rg.name
 }
+```
+--# locals.ts
+```
+locals {
+  prefix = "iac-terraform"
+}
+```
 
-,,,
+--# output.tf
+```
+output "resource_group_id" {
+  value = azurerm_resource_group.iac-terraform-rg.id
+}
+output "virtual_network_id" {
+  value = azurerm_virtual_network.iac-terraform-vnet.id
+}
+```
+--# variables.tf
+```
+variable "resource_group_name" {
+  default = "iac-terraform-rg"
+}
+```
