@@ -306,7 +306,12 @@ azurerm_resource_group.iac-terraform-rg: Destruction complete after 18s
 Apply complete! Resources: 0 added, 0 changed, 2 destroyed.
 
 ## Terraform Cloud output
+### State files
 <img width="723" height="412" alt="Screenshot 2026-07-08 at 8 04 40 PM" src="https://github.com/user-attachments/assets/2fd98d9c-7731-462b-9877-9696bdda3211" />
+
+ ### Runs
+ 
 <img width="773" height="448" alt="Screenshot 2026-07-08 at 8 04 23 PM" src="https://github.com/user-attachments/assets/408cc887-c8bc-4df7-aea5-48fc4a9a99f5" />
+
 <img width="1427" height="681" alt="Screenshot 2026-07-08 at 8 03 52 PM" src="https://github.com/user-attachments/assets/0ee74a50-59b0-4d1d-bdae-7e5b65dce733" />
 
