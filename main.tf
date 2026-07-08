@@ -17,6 +17,10 @@ provider "azurerm" {
 resource "azurerm_resource_group" "iac-terraform-rg" {
   name     = "${local.prefix}-rg"
   location = "westus2"
+  tags = {
+    environment = "dev - iac-terraform with azure"
+    team        = "devops"
+  }
 }
 
 # Create a virtual network
