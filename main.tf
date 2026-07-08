@@ -15,7 +15,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "iac-terraform-rg" {
-  name     = "${local.prefix}-rg"
+  name     = var.resource_group_name
   location = "westus2"
   tags = {
     environment = "dev - iac-terraform with azure"
