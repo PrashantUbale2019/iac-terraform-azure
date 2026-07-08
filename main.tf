@@ -6,6 +6,14 @@ terraform {
       version = "~> 3.0.2"
     }
   }
+  cloud {
+    
+    organization = "prashant-ubale-terraform-org"
+
+    workspaces {
+      name = "iac-terraform-azure"
+    }
+  }
 
   required_version = ">= 1.1.0"
 }
